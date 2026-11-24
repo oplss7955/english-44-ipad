@@ -1,21 +1,33 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>44지문 하루 시험 대비</title><style>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="영어 키워드로 44개 지문의 핵심과 첫소리 코드를 익혀요."><meta name="theme-color" content="#f8f6ef"><title>44지문 하루 시험 대비</title><style>
 *{box-sizing:border-box}body{margin:0;background:#f8f6ef;color:#28241e;font:17px/1.6 system-ui}main{max-width:760px;margin:auto;padding:20px}section,details{background:white;border:1px solid #e6dcc0;border-radius:18px;padding:18px;margin:14px 0}button,input,select{font:inherit;border:1px solid #c4af79;border-radius:10px;padding:10px 13px;margin:3px;background:white;color:inherit;max-width:100%}button{min-height:44px;cursor:pointer}button:disabled{opacity:.42}button.active,.primary{background:#f3df9e;font-weight:700}input{width:100%;font-size:18px}h1{font-size:1.6em;margin-bottom:4px}h2{overflow-wrap:anywhere;font-size:clamp(1.55rem,5vw,2.3rem);margin:6px 0 14px}h3{margin-bottom:2px}p{overflow-wrap:anywhere}ol{padding-left:26px}.muted{color:#625a4a}.choices button{display:block;width:100%;text-align:left;overflow-wrap:anywhere}#status{font-weight:700}summary{cursor:pointer}button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #705624;outline-offset:2px}.code{font-size:1.2em;letter-spacing:.04em;overflow-wrap:anywhere}
 
 main{padding:12px 18px}h1{margin-top:0}main>p{margin:2px 0 8px}section{margin:8px 0;padding:12px 16px}h2{margin:0 0 5px}h3{font-size:1rem;margin:7px 0 0}ol{margin:2px 0 4px;line-height:1.35}#status:empty{display:none}#status{margin:4px 0}#answer{line-height:1.4}#answer small{display:block;margin:2px 0}.study-entry{display:flex;align-items:center;gap:6px;margin-top:6px}.study-entry input{min-width:0;flex:1}.study-entry button{flex:none}@media(max-height:700px){main{font-size:15px}button,select{padding:5px 9px}section{padding:8px 12px}h2{font-size:1.6rem}} 
-</style><main><h1>44지문 하루 시험 대비</h1><p class="muted">영어만 보고 핵심과 흐름은 말로, 첫소리 코드는 직접 써 봐.</p><nav id="tabs" aria-label="학습 모드"></nav><section id="controls"></section><section id="card"><small id="progress"></small><h2 id="word"></h2><div id="task"></div><p id="status" role="status"></p><div id="answer"></div><div id="actions"></div></section></main><script>
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;word-break:keep-all}
+button{touch-action:manipulation}button:hover:not(:disabled){border-color:#705624}
+h2{text-wrap:balance}#progress,.speed-clock{font-variant-numeric:tabular-nums}
+.speed-levels{min-width:0;border:0;padding:0;margin:0}.speed-levels legend,.speed-form label{font-weight:700}
+.speed-clock{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:0 12px;margin:8px 0 4px}
+.speed-time{font-size:1.2em;font-weight:750}.speed-low .speed-time{color:#9b291c}
+.speed-bar{display:block;width:100%;height:8px;accent-color:#99721b;margin:0 0 12px}
+.speed-form label{display:block}.speed-form input{margin:0}.speed-form button{margin:0}.speed-form{margin-bottom:8px}
+.speed-missed{margin:4px 0}.speed-missed:last-child{margin-bottom:8px}
+.skip-link{position:absolute;top:8px;left:8px;padding:8px;background:white;transform:translateY(calc(-100% - 8px))}.skip-link:focus{transform:none}
+</style><a class="skip-link" href="#main">본문으로 건너뛰기</a><main id="main"><h1>44지문 하루 시험 대비</h1><p class="muted">영어만 보고 핵심과 흐름은 말로, 첫소리 코드는 직접 써 봐.</p><nav id="tabs" aria-label="학습 모드"></nav><section id="controls"></section><section id="card"><small id="progress"></small><h2 id="word"></h2><div id="task"></div><p id="status" role="status"></p><div id="answer"></div><div id="actions"></div></section></main><script>
 const data=[["lending", "투임디더인디", "21", "이자율은 지금의 돈과 미래의 돈 사이의 가치 차이를 반영하는 대출의 가격이다.", "빌리기와 빌려주기가 소비 시점을 바꿈 → 지금 빌려주는 돈과 나중에 받는 돈의 가치 비교 → 그 차이를 이자가 보상함"], ["responsibility", "소에디콘포에", "22", "콘텐츠 제작자는 상품 홍보를 넘어 사회와 환경에 도움이 되는 콘텐츠를 만들 책임이 있다.", "사회·환경적 책임 제시 → 상품과 서비스 홍보에만 집중하는 태도의 한계 → 사회와 환경에 기여하는 콘텐츠 요구"], ["Aristotel", "콘히비썸휴하에", "24", "아리스토텔레스의 윤리 철학은 장점에도 불구하고 시대와 특권 계층의 관점에 갇혀 있었다.", "오늘날 낯설게 보이는 견해 제시 → 위대한 사상가도 시대의 영향을 받음 → 고대 그리스의 특권 엘리트라는 배경이 그의 한계를 설명함"], ["survival", "유더데프얼인띠헤", "29", "초기 인류의 높은 영아 사망률은 큰 인구 증가가 최근에야 일어난 이유를 설명한다.", "생존이 어려운 자연 상태 제시 → 19세기까지 다른 영장류만큼 높은 영아 사망률 → 인구 급증은 비교적 최근의 현상"], ["nonverval", "어더어디웬더유", "30", "말과 비언어적 신호가 충돌하면 사람들은 비언어적 신호를 더 신뢰한다.", "비언어 신호가 우세하다는 연구 소개 → 언어와 비언어 메시지의 불일치 상황 → 신호와 맞지 않는 말은 믿지 않음"], ["eighty years", "어디이더더잇", "31", "행동의 자동화는 설계 결함이 아니라 복잡한 삶을 감당하게 해 주는 기능이다.", "80년 동안의 행동 대부분이 오래된 기본 설정대로 작동 → 매번 의식적으로 생각하고 결정할 때의 부담 → 자동화는 결함이 아니라 복잡한 삶에 필요한 특징"], ["mass culture", "이포하저인", "32", "법원은 소셜 네트워크를 통한 대중의 압력에서 독립해 정의를 실현해야 한다.", "대중문화가 법원 같은 전통 기관을 약화시킴 → 소셜 네트워크로 판결에 압력을 가하는 일의 위험 → 민주적 법치국가에서는 사법 독립이 필요함"], ["development", "휴엣플잇인더얼", "33", "인간의 가소성 때문에 변화와 적응은 아동기에 끝나지 않고 평생 계속된다.", "발달을 평생 계속되는 역동적 과정으로 봄 → 가소성은 변화하고 적응하는 능력 → 인간 발달은 아동기에 한정되지 않음"], ["Social media", "소더에댓더더디에인", "34", "정보 기술이 만든 연결성은 작은 오류를 빠르게 퍼뜨려 복합적인 실패를 일으킬 수 있다.", "소셜 미디어의 빠른 확산으로 도입 → 기술이 기관과 시스템을 서로 연결함 → 작은 오류도 즉시 퍼져 예측하기 어려운 실패가 생김"], ["infections", "사더에백포", "35", "페니실린과 백신 같은 의학 발전은 감염병의 치료와 예방을 가능하게 했다.", "감염병 대응의 의학적 발전 제시 → 페니실린 발견과 우두를 이용한 천연두 예방 사례 → 백신으로 치명적 감염병을 퇴치하거나 통제함"], ["designers", "어위더소언더디디", "36", "디자이너는 사용자와 관점이 다르므로 실제 사용성 테스트를 통해 디자인을 개선해야 한다.", "디자이너는 사용자와 다르다는 문제 → 추측만으로 사용자 관점을 객관적으로 알기 어려움 → 실제 사용자 행동을 보고 디자인을 개선함"], ["Reappraisal", "리테디원얼에더더크디원데", "37", "상황을 다르게 해석하는 재평가는 감정을 바꾸고, 그 효과가 쌓여 회복탄력성에 도움을 줄 수 있다.", "재평가의 뜻 소개 → 상황에 대한 생각을 바꾸면 감정 반응도 달라짐 → 변화가 축적되면 심리 건강과 회복탄력성에 기여함"], ["water", "웬워디디위포디", "38", "물의 안전 기준은 겉모습이 아니라 어디에 쓰이는지에 따라 달라진다.", "깨끗해 보인다고 안전한 물은 아님 → 수질은 기준에 따라 판단함 → 사용 목적마다 필요한 안전 기준이 다름"], ["primary sources", "라소옛이비라옛소", "39", "사회사학자는 엘리트가 남긴 기록을 그들의 관점과 다르게 읽어 평범한 사람들의 삶을 복원한다.", "평범한 사람의 1차 사료가 부족함 → 남은 자료는 엘리트 관점에 치우침 → 기록을 거슬러 읽어 일반인의 삶에 관한 단서를 찾음"], ["Dolphins", "돌원더하섬디이바디", "40", "돌고래는 반향 정위 신호를 뇌에서 병렬 처리해 인지 부담을 줄이고 처리 효율을 높인다.", "특화된 청각 피질 소개 → 되돌아오는 신호의 여러 측면을 동시에 처리 → 빠르고 효율적인 정보 처리"], ["boredom", "잇웬잇더리보인더잇레", "41~42", "무료함은 방치하면 불쾌하지만, 활용하면 성찰과 개인적 성장의 기회가 된다.", "무료함이 불러오는 부정적 감정 → 안전한 상황에서 무료해질 수 있다는 관점 전환 → 무료함을 성찰과 자기 개선에 활용함"], ["Moral outrange", "모잇웬위아인벗", "12-01", "도덕적 분노는 개인적 손해나 위험에도 잘못을 저지른 사람을 처벌하게 만든다.", "부당한 해악을 목격해 분노와 신체 반응이 생김 → 처벌은 개인에게 위험하고 당장 이익도 적음 → 분노가 그 계산을 제쳐두고 응징하게 해 협력 사회 유지에 기여함"], ["counterproductive", "와더아위트투벗더옛더웬", "12-02", "천연물 선호는 조상의 생존에는 유리했지만, 오늘날 안전성을 판단하는 기준으로는 부적절할 수 있다.", "식물에 의존하던 조상은 낯선 물질을 경계함 → 오늘날에는 천연 제품을 안전하다고 여기고 낯선 약 성분을 의심함 → 실제 이득과 해로움을 모르고 천연물을 선호하게 됨"], ["Dietary", "다어비더이논더디더데더", "12-03", "의약품과 달리 보충제는 판매 전 안전성·효과 심사가 없어 규제와 표시를 개선하자는 요구가 나온다.", "의약품은 판매 전 연구·승인을 거치고 판매 후에도 감독받음 → 보충제에는 같은 감독이 적용되지 않음 → 안전한 제품과 위험한 제품을 구분하도록 법과 표시 개선을 추진함"], ["Literature", "리리리위왓원디디", "12-04", "문학을 다시 읽을 때 생기는 새로운 의미는 작품 자체보다 독자의 경험과 관점이 달라진 결과다.", "문학은 정보를 얻고 버리는 글과 달리 다시 읽게 함 → 나이에 따라 같은 『리어왕』에서도 다른 의미를 발견함 → 분석·상상·감정까지 동원하는 독자의 참여가 의미 변화를 만듦"], ["Physics", "인히레히더인", "13-01", "아리스토텔레스는 자연의 규칙적 배열을 우연이 아니라 기능이나 목적과 연결했다.", "비의 생성으로 자연의 규칙성 문제 제기 → 앞니가 날카롭고 어금니가 뭉툭한 것이 우연인지 검토 → 찢기와 으깨기라는 기능이 배열을 설명함"], ["prolific", "에휴에피메디", "13-02", "좋은 아이디어를 얻으려면 초반부터 질을 가리기보다 먼저 많은 아이디어를 만들어야 한다.", "AI의 풍부한 아이디어 생성과 인간의 초기 질 평가 대비 → 창의적 성공은 아이디어 총량과 관련됨 → 디자인과 혁신은 아이디어를 많이 만들어 내는 과정에 집중함"], ["internal sensation", "비펄댓인더잇덴위인", "13-03", "타인의 표정과 몸짓을 무의식적으로 따라 하고 자기 몸의 신호를 느끼면서 상대의 감정을 이해할 수 있다.", "뇌는 타인의 마음에 직접 접근할 수 없음 → 표정·몸짓·목소리를 무의식적으로 모방함 → 내 몸의 내부 감각이 상대 감정을 느끼는 다리가 됨"], ["criticisms", "더캐맥포베잇", "13-04", "기술은 인간의 능력을 확장하면서도 그동안 쓰던 능력을 약화시킬 수 있다.", "맥루언의 ‘확장은 절단’ 주장 → 자동차·저장장치·GPS에 의존하며 걷기·기억·길 찾기를 덜 함 → 기술적 향상의 이면에 능력 손실 가능성이 있음"], ["Sharing", "셰디원옛더", "14-01", "같은 사건을 함께 겪더라도 배경지식과 경험이 다르면 그 의미를 똑같이 공유하지 않는다.", "같은 사건에도 사람마다 관점이 다름 → 부모는 물놀이가 재미있고 안전하다고 기대함 → 아기가 울면서 서로의 경험이 다름을 드러냄"], ["anthropological", "어브히더하", "14-02", "과학적 발견이 언제 이루어졌고 누구의 공인지 명확하게 나누기는 어렵다.", "라투르가 연구실의 실제 작업을 관찰함 → 뒤엉킨 관찰에서 TRF에 대한 합의가 형성됨 → 공동 수상한 두 집단 모두 자신만 공로를 인정받아야 한다고 여김"], ["music direction", "더이옛데언디웬", "14-03", "공연을 이끄는 음악 감독은 중요하지만, 무대 공연에서는 그 존재가 지나치게 드러나지 않는 편이 좋다.", "오래전부터 음악 지도자가 연주를 이끎 → 관객은 연출 기술보다 작품 전체를 경험하는 게 중요함 → 관현악 단독 공연과 달리 무대 반주에서는 시선과 귀가 무대로 향함"], ["brings to the page", "더디더더에게더헤뜨프", "14-04", "글의 소재에 대한 배경지식은 읽기 능력이 더 좋은 사람보다도 높은 이해도를 보이게 할 수 있다.", "야구를 잘 모르는 숙련 독자와 야구를 잘 아는 미숙 독자 비교 → 같은 야구 글을 읽고 이해도 검사 → 독해 실력보다 배경지식이 결과를 좌우함"], ["use of emotion", "더잇언언큐콘에", "15-01", "운동 지도자는 감정을 활용해 참여 지속, 운동 노력, 적절한 마음가짐을 도울 수 있다.", "즐거움이 운동을 지속하게 함 → 킥복싱에서 분노와 좌절을 활용해 힘을 더 쓰게 할 수 있음 → 요가에서는 연민 등 긍정적 감정으로 마음가짐을 조정함"], ["fundamental rule", "더프포이더", "15-02", "측정값은 측정 기기가 허용하는 최대 정밀도까지 기록해야 한다.", "정밀도는 기록 가능한 자릿수에 드러남 → 345.2가 345보다 더 정밀함 → 디지털 여부와 상관없이 가능한 자릿수까지 기록함"], ["mathematics curriculum", "더매디이오위", "15-03", "수학의 추상화는 대상을 한 부류로 묶어 속성을 한 번만 증명하고 그 결과를 개별 대상에 적용하는 것이다.", "수학은 대상을 묶어서 연구함 → 시간과 노력을 아끼고 아직 정의되지 않은 대상에도 성질을 보장함 → 개별 대상이 그 부류에 속함을 보이면 됨"], ["placebo effect", "비벗히인더", "15-04", "환자에게 위약이라고 알려도 무처치와는 다른 결과가 나올 수 있다.", "위약 효과에 속임수가 필요해 보임 → 연구자는 위약임을 밝히고 효과를 설명함 → 과민성 대장 증후군 실험에서 공개 위약군이 무처치군보다 더 자주 개선을 보고함"], ["ta-da!", "인이온인유어이", "16-01", "온라인 글은 결론을 맨 앞에 제시하고 흥미로운 도입으로 독자를 붙잡아야 한다.", "학술 글은 과정 뒤에 결론을 공개함 → 온라인에서는 끝까지 기다리는 독자가 적음 → 성과를 먼저 알리고 흥미로운 첫 문장으로 계속 읽게 함"], ["perceptual system", "더잇투이디잇포벗시인페인", "16-02", "지각은 하나의 단서가 막히면 다른 단서를 이용해 대상을 인식한다.", "뇌는 변하는 환경에 대응해 여러 경로를 사용함 → 별을 못 보면 다른 방법을 쓰는 철새가 비유로 나옴 → 얼굴은 눈·코·입 외에도 몇 개의 선이나 머리 모양으로 알아볼 수 있음"], ["Bir Tawil", "빌인언더투더디", "16-03", "이집트와 수단이 더 가치 있는 땅을 차지하려 서로 다른 국경선을 주장하면서 비르 타윌을 둘 다 원하지 않게 됐다.", "영국이 1899년 직선 국경을 긋고 1902년 새 국경을 설정함 → 두 선 사이에 할라이브와 비르 타윌이 생김 → 양국 모두 할라이브를 얻기 위해 비르 타윌을 주장하지 않음"], ["reference group", "언멤디이더하이에비", "16-04", "준거 집단은 규범을 익히고, 자신을 비교하고, 집단의 성취를 자기 자부심으로 느끼게 한다.", "소속 집단이 자기 평가 기준이 됨 → 집단의 규범이 자기 평가에 반영됨 → 뛰어난 친구와 비교해 낮게 평가하면서도 그 집단에 속한 것을 자랑스러워할 수 있음"], ["proximity", "인포노투타얼이시펄", "16-05", "음악을 들을 때 가까운 음높이·시간·공간은 음을 묶어 여러 흐름으로 지각하는 단서가 된다.", "비슷한 음높이, 동시에 나는 음, 같은 악기 소리를 묶음 → 피아노의 높은 선율과 낮은 반주를 구별함 → 바흐 독주곡에서도 높고 낮은 음을 두 흐름처럼 들음"], ["Public goods", "퍼포디에벗비디디", "16-06", "습지의 공공재 서비스는 시장가격이 없어도 혜택을 받는 모든 사람에게 큰 가치를 줄 수 있다.", "시장은 공공재를 과소평가함 → 습지는 정화·서식지 등 혜택을 여러 사람에게 무료로 줌 → 가격이 0이어도 사람들의 혜택을 합친 가치는 클 수 있음"], ["Deep work", "딥디포디위샬더", "17-01", "깊은 일은 새 가치와 능력을 만들지만, 얕은 일에 지나치게 시간을 쓰면 바쁜 만큼 성과가 나지 않는다.", "깊은 일의 집중과 성과 설명 → 얕은 일은 상대적으로 덜 어렵고 새 가치를 잘 만들지 않음 → 일상 업무도 필요하지만 지나치면 노력에 비해 산출이 적음"], ["Symbols", "심인위섭이웬하", "17-02", "기호의 의미를 공유하면 반응도 비슷해지지만, 같은 의미를 공유하지 않으면 사람들의 해석과 행동이 달라진다.", "기호와 상황 해석이 주관적 현실을 형성함 → 극장의 ‘불이야’라는 말에 의미를 아는 사람은 함께 대피함 → 의미를 모르면 혼란이 생기며 해석이 행동을 좌우함"], ["Depression", "디로잇디데데펄안", "17-03", "우울증은 원인과 증상 조합이 다양한 상태이므로 하나의 치료가 모두에게 통하지 않는다.", "흔하지만 이해하기 어렵다는 문제 → 다양한 원인과 증상 조합 제시 → 단일 치료법이 없고 항우울제 반응도 사람마다 다름"], ["Analogies", "아썸웬온콘더히레", "17-04", "철학에서 유추는 개념을 이해시키는 예시일 수도, 결론을 뒷받침하는 논증 자체일 수도 있다.", "플라톤의 태양 비유는 선 개념을 설명함 → 설계 논증에서는 시계에 장인이 필요하듯 우주에도 창조자가 필요하다고 유추함 → 후자의 유추는 결론을 지지하는 역할을 함"], ["Recovery", "리리피피에리어리", "17-05", "회복은 몸과 마음이 회복된 결과뿐 아니라, 그 결과를 만들어 내는 활동과 경험의 과정이기도 하다.", "회복을 과정과 결과로 구분함 → 신체적·심리적 자원이 돌아온 상태가 회복의 결과임 → 이를 만드는 과정이 먼저 일어나며 이후 활동의 스트레스를 완충할 자원이 됨"], ["difficult times", "더에댓원와앤데온아", "17-06", "고통스러운 경험은 행복감을 줄일 수 있지만, 삶이 의미 있다고 느끼는 데 기여할 수 있다.", "고통과 삶의 의미 연결 → 연구에서 행복한 삶과 의미 있는 삶을 비교함 → 의미가 큰 삶에는 과거의 고통이 더 많았고 그 경험은 행복감과는 반대로 관련됨"]];
-const $=x=>document.getElementById(x), labels=['최종 검사 · 직접 쓰기','학습','4지선다','순서 맞추기'];
+const $=x=>document.getElementById(x), labels=['최종 검사 · 직접 쓰기','학습','4지선다','순서 맞추기','스피드 퀴즈'];
 const key='44-passage-one-day-v1';let marks={};try{marks=JSON.parse(localStorage.getItem(key)||'{}')||{}}catch{}
 const studyKey='44-passage-study-v2';let studied={};try{studied=JSON.parse(localStorage.getItem(studyKey)||'{}')||{}}catch{}
 let mode=1,list=[],pos=0,phase='all',area='all';
+const speedMode=4, speedLevels=[['쉬움',20],['보통',12],['어려움',7]];
+let speedLevel=1, speedTimer, speedRun=null;
 function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function button(el,s,fn,cls=''){let b=document.createElement('button');b.type='button';b.textContent=s;b.onclick=fn;b.className=cls;el.append(b);return b}
 function node(el,tag,s,cls=''){let n=document.createElement(tag);n.textContent=s;n.className=cls;el.append(n);return n}
-const tabs=labels.map((s,j)=>button($('tabs'),s,()=>{mode=j;start('all') }));
+const tabs=labels.map((s,j)=>button($('tabs'),s,()=>{mode=j;start('all')}));
 function selected(){return data.filter(r=>area==='all'||(area==='mock'?!r[2].includes('-'):r[2].startsWith(area+'-')))}
 function weak(r){let m=marks[r[2]];return m&&(!m.content||!m.code)}
 function controls(){let c=$('controls');c.replaceChildren();const select=document.createElement('select');select.setAttribute('aria-label','출제 범위');for(const [v,t] of [['all','전 범위'],['mock','모의고사'],...[12,13,14,15,16,17].map(k=>[String(k),'수능특강 '+k+'강'])]){let o=node(select,'option',t);o.value=v}select.value=area;select.onchange=()=>{area=select.value;start('all')};c.append(select);button(c,'전체 시작',()=>start('all'),phase==='all'?'active':'');button(c,'오답만 다시',()=>{mode=0;start('weak')},phase==='weak'?'active':'');button(c,'전 범위 최종 검사',()=>{area='all';mode=0;start('final')},phase==='final'?'active':'');const group=selected();node(c,'div',`학습 완료 ${group.filter(r=>studied[r[2]]).length} / ${group.length}`,'muted');node(c,'div',`시험 대비 기록: 둘 다 통과 ${group.filter(r=>marks[r[2]]?.content&&marks[r[2]]?.code).length} / ${group.length} · 다시 볼 지문 ${group.filter(weak).length}`,'muted')}
-function start(p){phase=p;const group=selected();list=(p==='weak'||p==='final'||mode!==1?shuffle(group):group).filter(r=>p!=='weak'||weak(r));pos=0;tabs.forEach((b,j)=>{b.className=j===mode?'active':'';b.setAttribute('aria-pressed',String(j===mode))});controls();show()}
+function start(p){stopSpeed();phase=p;tabs.forEach((b,j)=>{b.className=j===mode?'active':'';b.setAttribute('aria-pressed',String(j===mode))});if(mode===speedMode){speedSetup();return}$('controls').hidden=false;$('word').removeAttribute('translate');$('word').removeAttribute('tabindex');const group=selected();list=(p==='weak'||p==='final'||mode!==1?shuffle(group):group).filter(r=>p!=='weak'||weak(r));pos=0;controls();show()}
 function feedback(r){const out=$('answer');if(out.childElementCount)return;node(out,'small',r[2].includes('-')?`수능특강 ${r[2].replace('-','강 ')}번`:`모의고사 ${r[2]}번`,'muted');node(out,'h3','핵심 한 줄');node(out,'div',r[3]);node(out,'h3','내용 흐름');const ol=node(out,'ol','');r[4].split(' → ').forEach(s=>node(ol,'li',s));node(out,'h3','첫소리 코드');node(out,'div',r[1],'code')}
 function compare(s,a){return s.normalize('NFC').trim()===a}
 function show(){for(const id of ['task','status','answer','actions'])$(id).replaceChildren();let t=$('task'),status=$('status'),actions=$('actions'),w=$('word');if(pos>=list.length){w.removeAttribute('lang');w.textContent=list.length?'이번 바퀴 완료':'복습할 오답이 없어';$('progress').textContent='';if(mode===1&&list.length){node(t,'p','이 범위의 지문을 모두 학습했어. 다른 단원을 선택하거나 44지문 최종 검사를 시작해.');button(actions,'전 범위 최종 검사',()=>{area='all';mode=0;start('final')},'primary');return}node(t,'p',list.length?'잠깐 쉬고 오답만 다시 풀거나, 전 범위를 섞어 최종 점검해.':'시험 대비에서 내용과 코드를 체크하면 틀린 지문이 여기에 모여.');return}const r=list[pos],a=r[1];w.lang='en';w.textContent=r[0];$('progress').textContent=`${pos+1} / ${list.length}`;
@@ -32,5 +44,96 @@ if(mode===2){let c=node(t,'div','','choices');shuffle([a,...shuffle(data.filter(
 if(mode===3){let chars=shuffle([...a]);if(chars.join('')===a){let j=chars.findIndex(c=>c!==chars[0]);if(j>0)[chars[0],chars[j]]=[chars[j],chars[0]]}let out=node(t,'p','','code'),pool=node(t,'div',''),picked=[];let keys=chars.map((ch,i)=>button(pool,ch,()=>{picked.push(i);update()}));const undo=button(t,'한 글자 취소',()=>{picked.pop();update()}),reset=button(t,'처음부터',()=>{picked=[];update()}),check=button(t,'코드 채점',()=>result(out.textContent===a),'primary');function update(){out.textContent=picked.map(i=>chars[i]).join('');keys.forEach((b,i)=>b.disabled=picked.includes(i));undo.disabled=reset.disabled=!picked.length;check.disabled=picked.length!==chars.length}update();return}
 function finish(code){lock();status.textContent=code?'코드 정답':'코드 오답 또는 미입력';feedback(r);node(actions,'p','핵심 주장과 전개 순서를 둘 다 말했어? (소재만 맞히면 다시 보기)');const save=(content)=>{marks[r[2]]={content,code};try{localStorage.setItem(key,JSON.stringify(marks))}catch{status.textContent+=' · 브라우저에 저장되지 않아 이 화면을 닫으면 기록이 사라질 수 있어.'}controls();pos++;show()};button(actions,'내용도 맞았어',()=>save(true),'primary');button(actions,'내용 다시 볼래',()=>save(false))}
 const form=node(t,'form',''),input=document.createElement('input');input.placeholder='한글 코드 입력';input.setAttribute('aria-label','한글 코드 입력');input.autocomplete='off';input.spellcheck=false;input.lang='ko';form.append(input);let submit=node(form,'button','채점하고 답 보기','primary');submit.type='submit';form.onsubmit=e=>{e.preventDefault();if(input.value.trim())finish(compare(input.value,a))};button(t,'코드 기억 안 나',()=>finish(false));
-}start('all');
+}
+
+function stopSpeed(){clearTimeout(speedTimer);speedRun=null}
+function resetSpeedCard(){
+  for(const id of ['progress','word','task','status','answer','actions']) $(id).replaceChildren();
+  $('word').removeAttribute('lang');
+  $('word').removeAttribute('translate');
+  $('word').removeAttribute('tabindex');
+}
+function speedSetup(focus=false){
+  stopSpeed();resetSpeedCard();
+  const c=$('controls');c.hidden=false;c.replaceChildren();
+  $('word').textContent='스피드 퀴즈';
+  node($('task'),'p','영어 키워드를 보고 한글 첫소리 코드를 써. 정답이면 바로 다음 문제로 넘어가고, 오답이거나 시간이 끝나면 도전이 종료돼.');
+  node($('task'),'p',`전 범위 ${data.length}문제 · 무작위 순서 · 문제마다 시간 초기화`,'muted');
+  const group=node(c,'fieldset','','speed-levels');node(group,'legend','문제당 제한 시간');
+  const options=speedLevels.map(([name,seconds],i)=>{
+    const b=button(group,`${name} ${seconds}초`,()=>{speedLevel=i;update()});
+    return b;
+  });
+  function update(){options.forEach((b,i)=>{b.className=i===speedLevel?'active':'';b.setAttribute('aria-pressed',String(i===speedLevel))})}
+  update();
+  const begin=button($('actions'),'시작',speedStart,'primary');
+  if(focus) begin.focus({preventScroll:true});
+}
+function speedStart(){
+  stopSpeed();resetSpeedCard();$('controls').hidden=true;
+  const [level,seconds]=speedLevels[speedLevel];
+  const run={items:shuffle(data),correct:0,deadline:0,duration:seconds*1000};speedRun=run;
+  const t=$('task');
+  const clock=node(t,'div','','speed-clock');
+  const time=node(clock,'span','','speed-time');time.setAttribute('role','timer');
+  node(clock,'span',`${level} · 문제당 ${seconds}초`,'muted');
+  const bar=node(t,'progress','','speed-bar');bar.max=run.duration;bar.setAttribute('aria-label','남은 시간');
+  const form=node(t,'form','','speed-form');
+  const label=node(form,'label','한글 첫소리 코드');label.htmlFor='speed-code';
+  const row=node(form,'div','','study-entry');
+  const input=document.createElement('input');
+  input.id='speed-code';input.name='code';input.lang='ko';input.autocomplete='off';input.autocapitalize='none';input.spellcheck=false;input.enterKeyHint='go';
+  row.append(input);
+  const submit=node(row,'button','제출','primary');submit.type='submit';
+  button($('actions'),'그만하기',()=>speedSetup(true));
+  const word=$('word');word.lang='en';word.setAttribute('translate','no');
+  let composing=false;
+  input.addEventListener('compositionstart',()=>{composing=true});
+  input.addEventListener('compositionend',()=>{composing=false});
+  function tick(){
+    if(speedRun!==run)return;
+    const remaining=run.deadline-performance.now();
+    if(remaining<=0){speedFinish('timeout');return}
+    const display=`${Math.ceil(remaining/1000)}초 남음`;
+    if(time.textContent!==display)time.textContent=display;
+    bar.value=remaining;
+    clock.classList.toggle('speed-low',remaining<=3000);
+    speedTimer=setTimeout(tick,Math.min(100,remaining));
+  }
+  function nextSpeed(){
+    word.textContent=run.items[run.correct][0];
+    $('progress').textContent=`${run.correct+1} / ${run.items.length}번 · ${run.correct}개 정답`;
+    input.value='';run.deadline=performance.now()+run.duration;
+    clearTimeout(speedTimer);tick();
+  }
+  form.onsubmit=e=>{
+    e.preventDefault();if(composing||speedRun!==run)return;
+    if(performance.now()>=run.deadline){speedFinish('timeout');return}
+    if(!input.value.trim()){ $('status').textContent='코드를 입력해.';input.focus({preventScroll:true});return }
+    $('status').textContent='';
+    if(!compare(input.value,run.items[run.correct][1])){speedFinish('wrong',input.value.trim());return}
+    run.correct++;
+    if(run.correct===run.items.length){speedFinish('complete');return}
+    nextSpeed();input.focus({preventScroll:true});
+  };
+  nextSpeed();input.focus({preventScroll:true});
+}
+function speedFinish(reason,entered){
+  const run=speedRun;if(!run)return;
+  stopSpeed();resetSpeedCard();
+  const word=$('word');word.tabIndex=-1;
+  word.textContent=`${run.correct} / ${run.items.length}개 정답`;
+  $('status').textContent=reason==='complete'?'완주! 모든 문제를 맞혔어.':reason==='wrong'?'오답으로 탈락했어.':'시간 초과로 탈락했어.';
+  if(reason!=='complete'){
+    const [prompt,code]=run.items[run.correct];
+    const out=$('answer');
+    const missed=node(out,'p','','speed-missed');missed.append('놓친 키워드: ');node(missed,'b',prompt).lang='en';
+    if(entered)node(out,'p',`내 답: ${entered}`,'speed-missed');
+    node(out,'p',`정답 코드: ${code}`,'speed-missed');
+  }
+  button($('actions'),'같은 난이도로 다시 시작',speedStart,'primary');
+  button($('actions'),'난이도 바꾸기',()=>speedSetup(true));
+  word.focus({preventScroll:true});
+}
+start('all');
 </script></html>
